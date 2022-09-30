@@ -1,11 +1,21 @@
 public class Fraction {
 
-    int nominateur;
+    int numerateur;
     int denominateur;
 
-    public Fraction(int nominateur, int denominateur) {
-        this.nominateur = nominateur;
+    public Fraction(int numerateur, int denominateur) {
+        this.numerateur = numerateur;
         this.denominateur = denominateur;
+    }
+
+    public Fraction(int numerateur){
+        this.numerateur = numerateur;
+        this.denominateur = 1;
+    }
+
+    public Fraction(){
+        this.numerateur = 0;
+        this.denominateur = 1;
     }
 
     @Override
