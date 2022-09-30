@@ -143,15 +143,27 @@ Vous respecterez les consignes ci-dessous :
     ```
 1. Ajoutez les fractions constantes ZERO (0, 1) et UN (1, 1) (cf. [Constants in Java](https://www.baeldung.com/java-constants-good-practices)),
     ```Java
-    // Déclaration des constantes
+     final Fraction ZERO(){
+        return new Fraction(0,1);
+    }
+
+    final Fraction ONE(){
+        return new Fraction(1,1);
+    }
     ```
 1. Ajoutez une méthode de consultation du numérateur et du dénominateur (par convention, en Java, une méthode retournant la valeur de l'attribut `anAttribute` est nommée `getAnAttribute`),
     ```Java
-    // Définition des getters
+    public int getDenominateur() {
+        return denominateur;
+    }
+
+    public int getNumerateur() {
+        return numerateur;
+    }
     ```
 1. Ajoutez une méthode de consultation de la valeur sous la forme d'un nombre en virgule flottante (méthode `doubleValue()`) (cf. [`java.lang.Number`](https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Number.html)),
    ```Java
-    // Assertions pour tester la conversion
+    assert f.double_Value() < 1 : "2/3 < 1";
     ```
 1. Ajoutez une méthode permettant l'addition de deux fractions (la méthode `add` prend en paramètre *une* fraction et *retourne* la somme de la fraction courante et du paramètre),
    ```Java
