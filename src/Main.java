@@ -8,6 +8,12 @@ public class Main {
 
         assert f.double_Value() < 1 : "2/3 < 1";
         System.out.println(f.double_Value());
+
+        Fraction m = new Fraction(1,5);
+        Fraction n = new Fraction(2,4);
+        assert m.add(n).double_Value() < 1: "Erreur Addition";
+        Fraction o = m.add(n);
+        System.out.println(o.numerateur + "/" + o.denominateur);
     }
 
     @Test
